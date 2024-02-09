@@ -42,3 +42,12 @@ function groupAnagrams(strs) {
 }
 
 console.log(groupAnagrams(strs))                // [['eat','tea','ate'], ['tan','nat], ['bat]]
+
+// Time Complexity
+    // for loop of array 'strs' - O(n) where n is the length of the input array 
+    // sorting each word within the input array O(klogk) where k is the length of the longest word 
+    // has get set map methods usually O(1) but due to hash collisions, can be O(n) (go through the list in values)
+// approx O(n * klogk)
+
+// Space Complexity
+    // affected by number of unique anagrams groups
