@@ -42,3 +42,13 @@ function topKFrequent(nums, k) {
     return result;
 };
 
+
+// Time Complexity 
+    // O(n + k)
+        // O(n) input array iterated to place elements and their frequency in the map 
+        // bucket also n long 
+        // bucket iterated through in first loop but in the second nested for loop, it doesnt go through the entire bucket b/c in order to reenter loop, the result array has to have less than k number of elements
+        // so second nested loop O(k)
+
+// Space Complexity O(n)
+    // size of bucket and map coincides with size of input array 
