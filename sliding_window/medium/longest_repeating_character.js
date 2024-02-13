@@ -37,3 +37,12 @@ function characterReplacement(s, k) {
 
     return res;                                             // returns longest length of substring that will have repeating letters if k number of changes are made 
 }
+
+
+// time complexity: o(n)
+    // iterates through the string with the for loop
+    // also iterates through the values in the hashmap 
+    // linear time complexity where n is the length of the string/ dependent on n
+
+// space complexity
+    // dependent on the number of distinct characters in a window 
