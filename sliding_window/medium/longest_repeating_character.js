@@ -27,7 +27,7 @@ function characterReplacement(s, k) {
         count.set(s[r], 1 + (count.get(s[r]) || 0))
 
         if((len - Math.max(...count.values())) > k) {
-            count.set(s[l], count.get(s[r]) - 1)                        // decreasing the amount of character on s[l] in map bc left pointer will be advanced/ window will be changed
+            count.set(s[l], count.get(s[l]) - 1)                        // decreasing the amount of character on s[l] in map bc left pointer will be advanced/ window will be changed
             l++;
         }
 
