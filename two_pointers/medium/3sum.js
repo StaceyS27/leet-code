@@ -20,7 +20,7 @@ function threeSum(nums){
         }
 
         let l = i+1;                            // for loop acts as first pointer and l anr r pointers are the 2nd and 3rd. 
-        let r = nums.length -1;                 // nums[i] aka 'a' staus still while the pointers move 
+        let r = nums.length -1;                 // nums[i] aka 'a' stays still while the pointers move 
 
         while(l<r){
             const threeSum = a + nums[l] + nums[r];
