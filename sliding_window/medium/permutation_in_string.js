@@ -78,3 +78,16 @@ const s2_2 = "eidboaoo";
 
 console.log(checkInclusion(s1, s2_1));  // Output: true
 console.log(checkInclusion(s1, s2_2));  // Output: false
+
+
+
+// time complexity
+    // O(len_S2) - which is the length of string s2 (the longer string)
+    // this is because at worst the function has to iterate through the entire string (slide the window) to find a permutation of s1
+    // however may find it early in the iteration, but still big O considering worst time 
+
+// space complexity
+    // O(len_s1) - length of the shorter string s1
+    // this is because for every iteration, 
+        // the size for s1 (count_s1) remains constant
+        // but the other map, count_window changes, but with each iteration maintains size of s1 for comparison
