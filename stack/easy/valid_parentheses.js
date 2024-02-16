@@ -40,3 +40,9 @@ function isValid(s) {
 }                                                                       // it is a valid string and will return true since the expression will be true 
 
 
+// time complexity
+    // O(n) where n is the size of the string. iterated through with the for loop
+// space complexity
+    // O(n) n size of string. in worst case, input string has all opening brackets and will be added to the stack array
+    // making the space taken up directly related to size of string. 
+
