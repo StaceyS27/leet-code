@@ -40,3 +40,12 @@ class MinStack {
     }
 }
 
+
+// time complexity 
+    // O(1) because items are pushed into a stack and popped, have constant time complexity
+    // to get the min also done in constant time because it is pushed to a seperate array 'minStack'
+        // getting the top/end of this array will get min which is constant time/ just accessing last element 
+
+// space complexity 
+    // O(n) elements pushed into main and min arrays 
+
