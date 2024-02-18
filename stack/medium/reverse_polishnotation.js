@@ -27,7 +27,7 @@ function evalPRN (tokens) {
     for(i=0; i<tokens.length; i++) {
         const char = tokens[i];
 
-        if(char in operations) {                            // if char is a operator ..
+        if(char in operations) {                            // if char is a operator | meaning that it is in operations object ..
             const value = performOperation(char)
             stack.push(value)                               // once operation has been performed and two numbers that have been operated on have been popped off, push into the stack its result so that it can be used in the next arithmetic (PEMDAS)
         } else {                                            // otherwise if char is just a number written as a string
@@ -39,6 +39,12 @@ function evalPRN (tokens) {
     return stack.pop();                                     // once all operations in the tokens string array have been performed, only one number will be left. pop it off to get result of the expression
 }
 
+
+// time complexity
+    // O(n) - loop through tokens array once 
+// space complexity 
+    // O(n) - worst case the stack array is the length of all the numberic elements in the input tokens array 
+        // n -> size of input. in this case tokens string array 
 
 
 
