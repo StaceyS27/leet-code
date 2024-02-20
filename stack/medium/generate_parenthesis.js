@@ -1,4 +1,5 @@
-// TODO: Work on understanding
+// TODO: Work on understanding. topics: recursion and backtracking 
+
 
 
 var generateParenthesis = (n) => dfs(n);
