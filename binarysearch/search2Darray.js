@@ -46,3 +46,10 @@ function searchMatrix(matrix, target) {
 
 }
 
+// time complexity: O(log(m) + log(n))
+    // includes binary search for the potential row O(log m)
+    // and binary search within the identified row O(log n)
+    // different variables m is the length of the matrix and n is the length of the individual subarrays within the matrix
+
+// space complexity: O(1)
+    // constant amount of space used regardless of input. No additional data structures used. 
