@@ -30,6 +30,14 @@ function minEatingSpeed(piles, h) {
 }
 
 
+// time complexity O(N * log(M))
+    // N is the number of piles in the array 
+    // and M i the maximum value in piles array 
+        // this is because instead of checking every pile with every speed possible from 1 - max (N * M) to tally up total hours to eat the bananas and compare it to h,
+        // the function is checking only some of the possible speeds using binary search - log(M)
+
+// space : O(1)
+    // no additional data structure used that takes up more or less space based on input 
 
 
 
