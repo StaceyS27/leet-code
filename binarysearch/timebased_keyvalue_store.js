@@ -1,22 +1,9 @@
-/**
- * Your TimeMap object will be instantiated and called as such:
- * var obj = new TimeMap()
- * obj.set(key,value,timestamp)
- * var param_2 = obj.get(key,timestamp)
- */
 class TimeMap {
     constructor() {
         // Initialize an empty map to store key-value pairs with timestamps
         this.map = {};
     }
 
-    /**
-     * @param {string} key
-     * @param {string} value
-     * @param {number} timestamp
-     * Time O(1) | Space O(1)
-     * @return {void}
-     */
     set(key, value, timestamp) {
         // Get the existing bucket for the key or create a new one
         const bucket = this.map[key] || [];
@@ -28,20 +15,15 @@ class TimeMap {
         bucket.push([value, timestamp]);
     }
 
-    /**
-     * @param {string} key
-     * @param {number} timestamp
-     * Time O(log(N)) | Space O(1)
-     * @return {string}
-     */
     get(key, timestamp, value = '', bucket = this.map[key] || []) {
         // Initialize left and right pointers for binary search
-        let [left, right] = [0, bucket.length - 1];
+        let left = 0;
+        let right = bucket.length - 1;
 
         // Perform binary search on the bucket
         while (left <= right) {
             // Calculate the midpoint
-            const mid = (left + right) >> 1;
+            const mid = Math.floor((left + right) / 2);
 
             // Get the value and timestamp at the midpoint
             const [guessValue, guessTimestamp] = bucket[mid];
@@ -66,4 +48,5 @@ class TimeMap {
         return value;
     }
 }
+
 
