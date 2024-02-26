@@ -34,3 +34,9 @@ function mergeTwoLists(list1, list2) {
     return dummy.next;                                                  // dummy is the front of the merged list so dummy.next is the head of the merged linked list 
 }
 
+
+// time complexity 
+    // O(m + n) - where m and n are the lengths of the input linked list sizes (may be different sizes)
+    // the function iterates through both lists once and the runtime is dependent on the number of nodes in both lists 
+// space complexity 
+    // O(1) - no additional data structures used. just the next pointers of the nodes in both input lists are updated 
