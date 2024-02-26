@@ -1,4 +1,4 @@
-// reverse the singly linked list 
+// reverse the singly linked list - iterative approach 
 
 // before the head of a linked list is null
 
