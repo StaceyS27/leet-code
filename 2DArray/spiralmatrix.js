@@ -45,3 +45,10 @@ function spiralOrder(matrix) {
 
     return order
 }
+
+// Time 
+    // O(rows * columns)
+        // every element in the matrix is traversed to get output array 
+// Space
+    // O(rows * columns)
+        // size of output array dependent on size of matrix 
