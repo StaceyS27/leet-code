@@ -20,3 +20,10 @@ var isSubsequence = function(s, t) {
 
     return subPointer === s.length;
 };
+
+
+// time - O(m + n)
+    // where m and n are the lengths of strings s and t
+    // at worst, algorithm will have to traverse the entire lengths of both strings
+// space - O(1)
+    // space used not dependent on the size of inputs (strings s and t)
