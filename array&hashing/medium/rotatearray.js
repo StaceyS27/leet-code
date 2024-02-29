@@ -1,6 +1,6 @@
 // rotate array to the right kth times 
 
-// non-optimal solution 
+// **non-optimal solution**
 // time O(n*k)
     // the splice method moves the index of all the numbers following the insertion O(n) worst case
     // the splice method/movement of indices happens k times (the number of rotations)
@@ -13,6 +13,7 @@ function rotate(nums, k) {
 
     return nums;
 };
+
 //______________________________________________________________________________________________________
 
 // more optimal solution 
