@@ -40,3 +40,8 @@ var minSubArrayLen = function(target, nums) {
 
     return minWindow
 }
+
+// time - O(n)
+    // array traversed only once 
+// space - O(1)
+    // no additional data structures used are dependent on size of input 
