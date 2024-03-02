@@ -52,7 +52,7 @@ function longestCommonPrefix(strs) {
 
 //_________________________________________________________________________________________________________________________
 
-// another way to solve the problem
+// another way to solve the problem (neetcode)
 
 // in this way, the first word is initialized as the longest common prefix  'pre'
 // then each string in the string array is iterated through word by word and compared from the back to the front
