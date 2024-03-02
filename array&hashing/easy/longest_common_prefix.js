@@ -49,3 +49,32 @@ function longestCommonPrefix(strs) {
     // space taken up by prefix variable is dependent and at worst the length of the shortest string in the array
     // other variables are constants and size will not change based on input size. 
 
+
+//_________________________________________________________________________________________________________________________
+
+// another way to solve the problem
+
+// in this way, the first word is initialized as the longest common prefix  'pre'
+// then each string in the string array is iterated through word by word and compared from the back to the front
+// if the current word at doesnt match index by index to the 'pre' word, 
+// the pre is sliced to create a new string that doesnt include the current index as a common prefix 
+// slice method arguments - 2nd is not inclusive in slicing, just index before
+// if index does not exist in current word/string being compared, will return undefined and if condition in for loop will still be true which will result in slicing
+
+
+function longestCommonPrefix(strs) {
+    let pre = strs[0];
+
+    for(let word of strs) {
+        for(let i=pre.length-1; i>=0; i--){
+            if(pre[i]!==word[i]){
+                pre = pre.slice(0, i)
+            }
+        }
+    }
+    
+    return pre;
+}
+
+// time - O(n^2)
+// sapce - O(N)
