@@ -26,7 +26,7 @@ function longestCommonPrefix(strs) {
     while (j < minLength) {
         let letter = strs[0][j];
 
-        for (let i = 1; i < strs.length; i++) {
+        for (let i = 1; i < strs.length; i++) {                            // can start in row with position 1 because first one at position 0 is used as a baseline 
             if (strs[i][j] !== letter) {
                 return prefix;
             }
@@ -39,4 +39,13 @@ function longestCommonPrefix(strs) {
     return prefix;
 };
 
+// time complexity - O(n * m)
+    // n number of strings in the array
+    // m length of the shortest string in the array
+    // going through each individual string in the array (length of array n) m times
+    // m times because will only keep checking each individual string for common letters at most m times (length of the shortest string)
+
+// space complexity - O(m)
+    // space taken up by prefix variable is dependent and at worst the length of the shortest string in the array
+    // other variables are constants and size will not change based on input size. 
 
