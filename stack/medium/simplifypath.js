@@ -39,3 +39,9 @@ function simplifyPath(path){
 
     return "/" + stack.join("/")
 }
+
+// time complexity - O(n)
+    // iterate through paths array, which is porportional to size of the 'path' string, once 
+// space complexity - O(n)
+    // at worst, input string path has all directory names (no ".." or "." )
+    // which would make the stack the same size as the input string path (the absolute path)
