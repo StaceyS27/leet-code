@@ -20,3 +20,10 @@ var strStr = function(haystack, needle) {
     }
     return -1; 
 }
+
+// time - O(n * m)
+    // n size of haystack
+    // m size of needle 
+    // may need to traverse, at worst, the needle (m) n times, the size of that haystack
+// space - O(1)
+    // no additional variables not dependent on size on input strings 
