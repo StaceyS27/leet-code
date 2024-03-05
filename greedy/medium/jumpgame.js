@@ -17,3 +17,5 @@ var canJump = function(nums) {
         return true 
     }
 }
+
+// *** only passed 157/172 test cases 
