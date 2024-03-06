@@ -42,6 +42,13 @@ function romanToInt(s) {
 }
 
 
+// time complexity - O(n)
+    // iterate through the input string of roman numberals (s) once 
+// space complexity - O(1)
+    // even though a map is used store the values of the different roman numbers
+    // its size is not dependent on the input string's size
+    // it stays constant no matter how large or small the roman numeral string 's' is 
+
 
 
 
