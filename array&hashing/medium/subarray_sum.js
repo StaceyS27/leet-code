@@ -19,7 +19,7 @@ var subarraySum = function(nums, k) {
     let map = new Map();
     
     // initialize the map with an entry for the cumulative sum 0 (no elements considered yet)
-    map.set(0, 1);
+    map.set(0, 1);                  // before getting to the first element of the array, the prefix sum is 0 
     
     // iterate through the array using a for-of loop
     for (const num of nums) {
@@ -41,3 +41,12 @@ var subarraySum = function(nums, k) {
 };
 
 console.log(subarraySum([1,2,3,4,1], 5))                // returns count of 2 
+
+
+// time complexity - O(n)
+    // the nums array is iterated through once
+// space complexity - O(n)
+    // at worst case each prefix sum is unique, 
+    // a new sum at after iterating through every element in the array 
+    // therefore the size of the map will be proportional to the input array size 'nums' | n (size of input array)
+    // (?) also worst case when numbers are positive, if negative, may result in previously added prefix sums
