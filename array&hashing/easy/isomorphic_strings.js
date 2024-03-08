@@ -5,13 +5,44 @@
 // no two characters can map to the same character
 // but a character can map to itself 
 
+// in the more optimal solution below, 
+// each letter in each string is mapped to the corresponding letter in the same position at string t
+// if not already present in map
+// the reverse, unlike other solution, is also done and the string at thw ith position at t is mapped to the same char at index i in s
+// this ensures letters are not mapping to two different letters 
 
+var isIsomorphic = function (s, t) {
+    if (s.length !== t.length) return false;
 
+    const mapOne = new Map();
+    const mapTwo = new Map();
 
+    for (let i = 0; i < s.length; i++) {
+        if (mapOne.has(s[i])) {
+            if (mapOne.get(s[i]) !== t[i]){
+                return false; 
+            }
+        } else {
+            mapOne.set(s[i], t[i])
+        } 
 
+        if (mapTwo.has(t[i])) {
+            if (mapTwo.get(t[i]) !== s[i]){
+                return false
+            } 
+        } else {
+            mapTwo.set(t[i], s[i])
+        }
+    }
 
+    return true;
+};
 
-
+// time complexity - O(n)
+    // iterates through both strings once (actually 2n or n + n but reduced to n in big O calculation)
+// space complexity - O(n)
+    // also reduced from 2n or n + n (n being the sizes of s and t bc they are the same size)
+    // at worst, each character is unique and will be added to hashmap 
 //_____________________________________________________________________________________________________
 
 //** non-optimal solution ** 
