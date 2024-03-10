@@ -1,14 +1,3 @@
-/**
- * Linear 
- * Time O(N) | Space O(1)
- * https://leetcode.com/problems/merge-sorted-array/
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
-
 // Merge Sorted Array
 
 // both input arrays in ascending order  (nums1 and nums2)
@@ -46,4 +35,13 @@ function merge(nums1, m, nums2, n) {
     
 }
 
+// time complexity - O(m + n)
+    // m is the length of nums1
+    // n is the length of nums2
+    // at worst case, the input arrays are of very different sizes so need to consider the lengths of both 
+    // in first while loop, both input arrays are iterated through (m + n)
+    // second while loop only iterates through nums2, so O(n), but first loop contributes more to the time complexity analysis 
+
+// space complexity - O(1)
+    // no additional data structures used. sorting completed within nums1 array 
 
