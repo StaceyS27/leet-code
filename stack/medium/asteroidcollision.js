@@ -7,6 +7,8 @@
 // if an array of asteroids starts with a negative number, then it will never collide with incoming asteroids 
 // even if they are positive because will look like this <---  ---> ex: [-5, 10]
 // another ex is [-2, -1, 1, 2] the resulting asteroids array will still be the same because the asteroids even though diff signs, will never make contact
+// sum: a positive approaching a negative will never cause a collision
+// but a negative approaching a positive will 
 
 // because of this reason, the while loop only needs to check the stack when the stack has a pos num on top and the incoming asteroid is a neg num
 // the diff or addition between the two indicates which one will explode (the one of larger magnitiude will)
@@ -48,3 +50,15 @@ const asteroidCollision = (asteroids) => {
 
     return stack;
 };
+
+
+// time complexity - O(n)
+    // even though it seems like there are two nested loops, time is O(n).. 
+    // because while loop does not cause reprocessing of the same input array 
+    // (?) instead does constant time comparisons between the asteroid in question and the top of the stack 
+    // diff and pop also constant time operations
+    // not dependent on size of input array even though at worst can have a lot of pos numbers in asteroids arr followed by larger neg num
+
+// space complexity - O(n)
+    // stack size dependent on input size and can be proportional 
+    // worst case a lot of pos or neg in input array which will all be pushed into the stack 
