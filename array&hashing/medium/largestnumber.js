@@ -39,3 +39,12 @@ var largestNumber = function(nums) {
     // Concatenate sorted numbers to form the largest number
     return nums.join('');
 };
+
+// time complexity - O(n * log n)
+    // sorting methods have a time complexity of nlogn
+    // additionally the join method on the nums array does contribute time of O(n)
+        // but is ignored in calculation as nlogn sorting algorithm contributes more to time complexity 
+
+// space complexity - O(1)
+    // no additonal data structures used that increases in size proportional to input array's size
+    // sorting method modifies nums in place 
