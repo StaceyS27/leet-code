@@ -59,3 +59,14 @@ function isPalindrome(s) {
     return true; 
 }
 
+// time complexity - O(n)
+    // as the pointers are moving along the string, it is only O(n)
+    // but when mismatching characters are encountered, 2 slice methods are performed which are O(n) operations 
+        // ? but traveling parts of the string not traversed yet 
+    // the ispalindrome function is called twice on the same part of the string (which at worst is 'n' long) - O(2 * n) or O(n + n)
+        // one time exlcuding the r and the other excluding the left 
+        // however this is reduced to O(n) in big O calculations 
+
+// space complexity - O(n)
+    // slice methods make new strings which at worst are or near length of input string, 'n'
+    // 2 * n but 2 is ignored in calculations 
