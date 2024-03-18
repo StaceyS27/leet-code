@@ -1,3 +1,7 @@
+// **** Not correct solution, need to work on it **** 
+
+
+
 var findClosestElements = function(arr, k, x) {
     // result should be sorted in ascending order 
     // binary search for x 
@@ -34,7 +38,8 @@ var findClosestElements = function(arr, k, x) {
         let mid = Math.floor((left+right)/2)
 
         if(arr[mid] === x) {
-            targetIndex = mid
+            targetIndex = mid;
+            break; 
         }
         if(arr[mid]>x){
             right = mid - 1;
@@ -51,7 +56,11 @@ var findClosestElements = function(arr, k, x) {
     let windowSize = (rightBorder - leftBorder) + 1;
 
     while(windowSize<k) {
-        if((Math.abs(arr[leftBorder-1] - x)) <= (Math.abs(arr[rightBorder+1] - x))) {
+        if(leftBorder === 0) {
+            rightBorder+=1;
+        } else if (rightBorder === arr.length -1) {
+            leftBorder-=1
+        } else if((Math.abs(arr[leftBorder-1] - x)) <= (Math.abs(arr[rightBorder+1] - x))) {
             leftBorder-=1
         } else {
             rightBorder+=1
