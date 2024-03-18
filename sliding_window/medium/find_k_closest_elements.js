@@ -74,3 +74,17 @@ var findClosestElements = function (arr, k, x) {
                                                                                                     // 2nd argument in slice not included in newly formed array
     return output;
 };
+
+// time complexity
+    // if x is not in the array, will have to possibly search entire array to find closest value O(n)
+    // then reiterate through the array to find the k closest values 
+    // O(n + k)
+
+    // if x is in the array, will use binary search to find the index of x
+    // then again find the k closest values in the 2nd while loop
+    // O(logn + k)
+
+    // ? maybe worst time then is O(n+k)
+
+// space complexity - O(k) ?
+    // ? output array would grow with the size of k 
