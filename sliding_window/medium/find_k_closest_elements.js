@@ -45,9 +45,9 @@ var findClosestElements = function (arr, k, x) {
     console.log(closestTarget)
 
     let leftBorder = targetIndex;                                   // leave the borders on index in case desired k value/window size is only 1 
-    let rightBorder = targetIndex;
-
-    // Update borders if closestTarget is found
+    let rightBorder = targetIndex;                                  // could have also just declared the variables with no values assigned and then assign values in if and else blocks
+                                                                    // can keep same if like below, but make the else to make borders equal targetIndex
+    // Update borders if closestTarget is found                     // cannot declare and assign value to variable in if and else block only bc then no other part of code will have access to it 
     if (closestTarget !== null) {                                   // will change borders if closestTarget is not null which happens if x is not in the array
         leftBorder = closestTarget;                                 // need to specify closesttarget not equal null bc if it is equal to 0, still considered falsey
         rightBorder = closestTarget;                                // and won't execute the if block 
