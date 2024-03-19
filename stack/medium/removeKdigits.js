@@ -46,3 +46,7 @@ var removeKdigits = function (num, k) {
     let res = stack.join('');
     return res ? res : '0';
 };
+
+
+// time complexity - O(n)
+// space complexity - O(n)
