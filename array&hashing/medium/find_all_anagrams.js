@@ -49,7 +49,7 @@ var findAnagrams = function (s, p) {
                 }
             }
 
-            if (count === p.length) {
+            if (count === smap.size) {
                 result.push(left)
             }
 
