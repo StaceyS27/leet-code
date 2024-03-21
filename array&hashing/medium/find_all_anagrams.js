@@ -62,3 +62,17 @@ var findAnagrams = function (s, p) {
     }
     return result;
 };
+
+
+// time complexity - O(s + p)
+    // s is length of input string s and p is length of input string p 
+    // similar to O(n)
+    // iterating through string p initially to form pmap
+    // iterating through string s on main loop using sliding window to find substrings that are anagrams of p 
+    // also iterating through keys of smap which is also O(p) since at most it is the length of p 
+    
+    // how i understand it :) (both space and time)
+
+// space complexity - O(p)
+    // worst case, both hasmaps of length of p
+    // all the characters in p and the window at the moment in s, at worst, are distinct characters 
