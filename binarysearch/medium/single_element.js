@@ -54,6 +54,5 @@ function singleDuplicate(nums) {
 }
 
 
-
 // O(log n) time and O(1) space
     // binary search used and no additional data structures used 
